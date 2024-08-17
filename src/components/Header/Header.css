@@ -3,114 +3,136 @@
   justify-content: space-between;
   align-items: center;
   background-color: #000;
-  padding: 10px 60px;
+  padding: 10px 20px;
   color: #fff;
+  position: relative;
 }
 
-.logo img {
-  height: 50px;
-}
-
-.nav {
+.logo {
   display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  gap: 30px;
+  align-items: center;
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  color: #0b8003; /* Green color */
+}
+
+.logo-subtext {
+  color: red; /* Red color */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
 }
 
 .nav-link {
+  margin: 0 15px;
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
   position: relative;
-  padding-bottom: 5px;
+  display: inline-block;
 }
 
-.nav-link.active {
-  color: #32cd32;
+.nav-link:hover {
+  color: #0b8003; /* Green hover color */
 }
 
-.nav-link.active::after {
+.special-link.active::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  height: 3px;
-  background-color: #32cd32;
+  height: 2px;
+  background-color: #0b8003; /* Green underline */
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
-.header-buttons {
-  display: flex;
-  gap: 20px;
-}
-
-.login-button,
-.signup-button {
-  border: none;
+.cta-button {
+  background-color: #0b8003;
+  color: white;
   padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #006400; /* Darker green */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
   cursor: pointer;
-  color: #fff;
-  transition: background-color 0.3s;
 }
 
-.login-button {
-  background-color: #444;
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
 }
 
-.signup-button {
-  background-color: #32cd32;
+.bar.open:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 5px);
 }
 
-.signup-button:hover {
-  background-color: #28a745;
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -5px);
 }
 
 /* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
 
-@media (max-width: 1024px) {
-  .nav {
-    gap: 20px;
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
   }
 
   .nav-link {
-    font-size: 16px;
-  }
-
-  .header-buttons {
-    gap: 10px;
-  }
-
-  .login-button,
-  .signup-button {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    padding: 10px 20px;
-  }
-
-  .logo img {
-    height: 40px;
-  }
-
-  .nav {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .header-buttons {
-    margin-top: 10px;
-  }
-
-  .login-button,
-  .signup-button {
-    width: 100%;
+    margin: 10px 0;
     text-align: center;
+    width: auto; /* Adjusts the underline width */
+  }
+
+  .cta-button {
+    width: 40%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .special-link.active::after {
+    width: 100%; /* Ensures underline matches text width */
   }
 }

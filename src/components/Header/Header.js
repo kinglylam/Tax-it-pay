@@ -1,36 +1,53 @@
-// Header.tsx
-import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <header className="header">
       <div className="logo">
         <img src="logo.png" alt="Logo" />
       </div>
-
-      <div>
-        {" "}
-        <a href="#" className="nav-link active">
+      <div className="hamburger" onClick={toggleMenu}>
+        <span className={menuOpen ? "bar open" : "bar"}></span>
+        <span className={menuOpen ? "bar open" : "bar"}></span>
+        <span className={menuOpen ? "bar open" : "bar"}></span>
+      </div>
+      <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <NavLink
+          to="/individuals"
+          className={({ isActive }) =>
+            isActive ? "nav-link special-link active" : "nav-link special-link"
+          }
+        >
           For Individuals
-        </a>
-        <a href="#" className="nav-link">
+        </NavLink>
+        <NavLink
+          to="/businesses"
+          className={({ isActive }) =>
+            isActive ? "nav-link special-link active" : "nav-link special-link"
+          }
+        >
           For Businesses
-        </a>
-      </div>
-      <nav className="nav">
-        <a href="#" className="nav-link">
+        </NavLink>
+        <NavLink to="/about-us" className="nav-link">
           About Us
-        </a>
-        <a href="#" className="nav-link">
+        </NavLink>
+        <NavLink to="/contact" className="nav-link">
           Contact
-        </a>
+        </NavLink>
+        <NavLink to="/login" className="nav-link">
+          Login
+        </NavLink>
+        <NavLink to="/create-account" className="cta-button">
+          Create free account
+        </NavLink>
       </nav>
-      <div className="header-buttons">
-        <button className="login-button">Login</button>
-        <button className="signup-button">Create Free Account</button>
-      </div>
     </header>
   );
 };

@@ -1,17 +1,14 @@
 import React from "react";
-import "./Hero.css";
-// import image1 from "./image1.jpg"; // Replace with your image paths
-// import image2 from "./image2.jpg";
-// import image3 from "./image3.jpg";
+import "./HeroOne.css";
 
-const Hero = () => {
+const HeroOne = () => {
   return (
     <div className="hero">
       <div className="hero-content">
         <div className="text-section">
           <h1>Secure & seamless online transactions</h1>
           <p>Providing you with the best online payment experience</p>
-          <button className="cta-button">Create free account</button>
+          <button className="cta-button-hero">Create free account</button>
         </div>
         <div className="image-section">
           <div className="circle-wrapper circle1">
@@ -33,4 +30,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroOne;
