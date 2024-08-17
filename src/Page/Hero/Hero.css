@@ -1,0 +1,245 @@
+.hero {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  min-height: 100vh; /* Ensure it takes full viewport height at minimum */
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.text-section {
+  width: 40%;
+  text-align: left;
+  padding-left: 30px;
+  padding-top: 150px;
+}
+
+.text-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #0b8003;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.image-section {
+  width: 55%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40px; /* Move image section upwards */
+}
+
+.circle-wrapper {
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.circle1 {
+  width: 284px;
+  height: 285px;
+  top: -110px; /* Adjusted positioning */
+  left: 2px;
+}
+
+.circle2 {
+  width: 456px;
+  height: 456px;
+  top: -120px; /* Adjusted positioning */
+  left: 180px;
+}
+
+.circle3 {
+  width: 285px;
+  height: 286px;
+  top: 180px; /* Adjusted positioning */
+  left: 280px;
+}
+
+.circle-green {
+  width: 170px;
+  height: 170px;
+  background-color: rgba(37, 167, 92, 0.39);
+  border-radius: 50%;
+  position: absolute;
+  top: 120px;
+  right: 390px;
+  z-index: 1;
+}
+
+.border-thin-green {
+  width: 185px;
+  height: 185px;
+  border: 1px solid rgba(92, 178, 58, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: 120px;
+  right: 378px;
+  z-index: 1;
+}
+.border-thick-green {
+  width: 130px;
+  height: 130px;
+  border: 3px solid rgba(92, 178, 58, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
+}
+.circle-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle-gold {
+  width: 90px;
+  height: 90px;
+  background-color: rgba(255, 199, 39, 0.3);
+  border-radius: 50%;
+  position: absolute;
+  top: -120px;
+  right: 370px;
+  z-index: 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  /* iPad */
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .text-section,
+  .image-section {
+    width: 100%;
+    text-align: center;
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+
+  .image-section {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+  .hero {
+    text-align: center;
+    align-items: center;
+    justify-content: "center";
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .text-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-section p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .circle1 {
+    width: 134px;
+    height: 135px;
+    top: 35px; /* Adjusted positioning */
+    left: 10px;
+  }
+
+  .circle2 {
+    width: 196px;
+    height: 196px;
+    top: 40px; /* Adjusted positioning */
+    left: 100px;
+  }
+
+  .circle3 {
+    width: 165px;
+    height: 166px;
+    top: 180px; /* Adjusted positioning */
+    left: 120px;
+  }
+  .image-section {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle-gold {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 199, 39, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+    right: 7px;
+    z-index: 2;
+  }
+
+  .circle-green {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(37, 167, 92, 0.39);
+    border-radius: 50%;
+    position: absolute;
+    top: 135px;
+    right: 30px;
+    z-index: 1;
+  }
+  .border-thin-green {
+    width: 77px;
+    height: 77px;
+    border: 1px solid rgba(92, 178, 58, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: 135px;
+    right: 23px;
+    z-index: 1;
+  }
+  .border-thick-green {
+    width: 77px;
+    height: 77px;
+    border: 3px solid rgba(92, 178, 58, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: 85px;
+    right: -155px;
+    z-index: 2;
+  }
+  .circle-wrapper {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,50 @@
+/* .hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #000;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-image-container {
+  margin-top: 20px;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.desktop {
+  display: block;
+}
+
+.tablet,
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .tablet {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+} */
