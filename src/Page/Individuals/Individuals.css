@@ -1,0 +1,45 @@
+.TRContainer {
+  padding: 30px;
+  background-color: transparent; /* White background for the entire app */
+  position: relative;
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.green-circle-background {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background-color: rgba(37, 167, 92, 0.39);
+  border-radius: 50%;
+  top: 50%;
+  right: -45px;
+  transform: translateY(-50%);
+  z-index: 0;
+  overflow-x: hidden;
+}
+.green-circle-background-border {
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  top: 50%;
+  right: 350px;
+
+  z-index: 0;
+  overflow-x: hidden;
+  border: 1px solid red;
+}
+
+.upper-row-i {
+  position: relative;
+  z-index: 1; /* Ensure content stays above the green circle */
+  background-color: transparent;
+  margin-bottom: 120px;
+}
+.lower-row-i {
+  position: relative;
+  z-index: 1; /* Ensure content stays above the green circle */
+  background-color: transparent;
+}

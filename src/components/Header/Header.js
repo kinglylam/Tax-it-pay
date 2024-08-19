@@ -6,8 +6,9 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen((prevState) => !prevState);
   };
+
   return (
     <header className="header">
       <div className="logo">
@@ -18,6 +19,7 @@ const Header = () => {
         <span className={menuOpen ? "bar open" : "bar"}></span>
         <span className={menuOpen ? "bar open" : "bar"}></span>
       </div>
+
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
         <NavLink
           to="/individuals"
@@ -35,18 +37,10 @@ const Header = () => {
         >
           For Businesses
         </NavLink>
-        <NavLink to="/about-us" className="nav-link">
-          About Us
-        </NavLink>
-        <NavLink to="/contact" className="nav-link">
-          Contact
-        </NavLink>
-        <NavLink to="/login" className="nav-link">
-          Login
-        </NavLink>
-        <NavLink to="/create-account" className="cta-button">
-          Create free account
-        </NavLink>
+        <NavLink className="nav-link">About Us</NavLink>
+        <NavLink className="nav-link">Contact</NavLink>
+        <NavLink className="nav-link">Login</NavLink>
+        <NavLink className="cta-button">Create free account</NavLink>
       </nav>
     </header>
   );

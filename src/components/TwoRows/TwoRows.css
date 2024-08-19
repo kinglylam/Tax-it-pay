@@ -1,0 +1,25 @@
+.TRContainer {
+  padding: 30px;
+  background-color: transparent; /* White background for the entire app */
+  position: relative;
+  min-height: 100vh; /* Ensure it takes full viewport height */
+}
+
+.green-circle-background {
+  position: absolute;
+  width: 500px; /* Adjust size as needed */
+  height: 500px;
+  background-color: #00a651; /* Green color for the circle */
+  border-radius: 50%;
+  top: 50%; /* Positioning in the middle */
+  right: -250px; /* Adjust positioning */
+  transform: translateY(-50%);
+  z-index: 0; /* Ensure it stays behind the content */
+}
+
+.upper-row,
+.lower-row {
+  position: relative;
+  z-index: 1; /* Ensure content stays above the green circle */
+  padding: 40px 20px; /* Add padding for better spacing */
+}

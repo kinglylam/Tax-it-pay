@@ -1,0 +1,109 @@
+.two-hero {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  overflow-x: hidden;
+  z-index: 2;
+}
+
+.second-hero-content {
+  text-align: center;
+  color: white;
+  min-height: 75vh;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 35%;
+}
+
+.second-hero-circular-green {
+  width: 370px;
+  height: 370px;
+  background-color: rgba(37, 167, 92, 0.39);
+  border-radius: 50%;
+  position: absolute;
+  top: 300px;
+  right: 10px;
+  z-index: 1;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+.second-hero-border-green {
+  width: 410px;
+  height: 370px;
+  border: 1px solid rgba(92, 178, 58, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: 310px;
+  right: -10px;
+  z-index: 1;
+}
+
+.hero-two h1 {
+  font-size: 600;
+  font-weight: 46px;
+  line-height: 64px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.hero-two p {
+  font-size: 400;
+  font-weight: 18px;
+  line-height: 28.8px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.cta-button-ht {
+  background-color: #00a651;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cta-button-ht:hover {
+  background-color: #008d45;
+}
+
+.second-hero-image-container {
+  width: 100%;
+  display: flex;
+  background-color: white;
+  height: 50vh;
+  z-index: 2;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.second-hero-image {
+  width: 75%;
+  height: 500px;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 370px;
+  right: 12.5%;
+}
+
+@media (max-width: 768px) {
+  .second-hero-circular-green {
+    display: none;
+  }
+  .second-hero-border-green {
+    display: none;
+  }
+  .second-hero-image {
+    height: 350px;
+  }
+  .second-hero-content {
+    width: 90%;
+  }
+}
